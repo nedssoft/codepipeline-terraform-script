@@ -120,6 +120,7 @@ resource "aws_codebuild_project" "build_project" {
   source_version = var.branch_name
 
   tags = {
+    # change this to your tags
     Environment = "Test"
   }
 }

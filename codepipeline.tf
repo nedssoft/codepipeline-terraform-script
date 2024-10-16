@@ -109,7 +109,7 @@ resource "aws_codepipeline" "deploy_pipeline" {
   stage {
     name = "Deploy"
     action {
-      name            = "DeployToElasticBeanstalk"
+      name            = "Deploy"
       category        = "Deploy"
       owner           = "AWS"
       provider        = "ElasticBeanstalk"

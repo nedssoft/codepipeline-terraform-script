@@ -5,12 +5,10 @@ minsize             = 1
 maxsize             = 4
 tier = "WebServer"
 solution_stack_name= "64bit Amazon Linux 2023 v6.0.3 running Node.js 18"
-certificate_arn = "arn:aws:acm:eu-west-2:004507982812:certificate/47624529-3d66-4ec5-8866-25c467daf6fd"
+certificate_arn = "arn:aws:acm:region:account-id:certificate/certificate-id"
 
-env_map = {
-
-"KEY" = "VALUE"
-
+elastic_beanstalk_env = {
+  "KEY" = "VALUE"
 }
 
 codebuild_env = {

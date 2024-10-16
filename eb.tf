@@ -158,14 +158,14 @@ resource "aws_elastic_beanstalk_environment" "beanstalkappenv" {
   }
 
   dynamic "setting" {
-    for_each = var.env_map
+    for_each = var.elastic_beanstalk_env
     content {
       namespace = "aws:elasticbeanstalk:application:environment"
       name      = setting.key
       value     = setting.value
     }
   }
-  
+
   setting {
     namespace = "aws:elasticbeanstalk:application:environment"
     name      = "API_ENV"
