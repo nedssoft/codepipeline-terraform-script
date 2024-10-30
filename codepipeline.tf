@@ -7,7 +7,7 @@ resource "aws_codestarconnections_connection" "github_connection" {
 
 resource "aws_s3_bucket" "pipeline_artifacts" {
   bucket = "${local.base_name}-pipeline-artifacts"
-
+  force_destroy = true
   tags = {
     Name        = "${local.base_name}-pipeline-artifacts"
   }

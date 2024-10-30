@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18 # change this to the version of your Node.js application
+    commands:
+      - # echo Add your install commands here...
+      - # npm install
+  pre_build:
+    commands:
+      - # echo Add your pre_build commands here...
+  build:
+    commands:
+      - # echo Add your build commands here...
+      - echo Build started on `date`
+      - # npm run build
+  post_build:
+    commands:
+      - # echo Add your post_build commands here...
+      - echo Build completed on `date`
+artifacts:
+  files:
+   - '**/*'

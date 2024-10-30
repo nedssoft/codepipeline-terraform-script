@@ -1,5 +1,6 @@
 resource "aws_s3_bucket" "build_artifacts" {
   bucket = "${local.base_name}-build-artifacts"
+  force_destroy = true
 }
 
 # Uncomment to enable cloudwatch logging

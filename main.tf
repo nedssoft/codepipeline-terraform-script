@@ -34,7 +34,6 @@ data "aws_region" "current" {}
 locals {
   env = terraform.workspace
   base_name = format("%s-%s",var.project_name, terraform.workspace)
-  ssm_base_name = format("/%s/%s",var.project_name, terraform.workspace)
   account_id = data.aws_caller_identity.current.account_id
   region = data.aws_region.current.name
 }
